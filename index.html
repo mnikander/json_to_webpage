@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSON to Webpage</title>
     <script>
-        function createButtons() {
-
+        function createButton(label, payload) {
             const button = document.createElement('button');
-            button.textContent = 'Click Me';
+            button.textContent = label;
             document.body.appendChild(button);
+
+            const linebreak = document.createElement('br');
+            document.body.append(linebreak);
             
             button.addEventListener('click', () => {
-                alert('Button was clicked!');
+                alert(payload);
             });
         }
 
-        window.onload = createButtons; // run the function after the page loads
+        function createAllButtons() {
+            createButton('Click Me', 'The button was clicked');
+            createButton('Or Me', 'The other button was clicked');
+        }
+
+        window.onload = createAllButtons; // run the function after the page loads
     </script>
 </head>
 <body>
