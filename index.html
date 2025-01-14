@@ -20,11 +20,13 @@
         }
 
         function createAllButtons() {
-            // format of the array entries: {"label": "", "message": ""},
-            const buttons = JSON.parse('[ \
-                                            {"label": "Click me", "message": "The button was clicked"}, \
-                                            {"label": "Or Me", "message": "The other button was clicked"} \
-                                        ]');
+            const txt = '[ \
+                            {"label"  : "Click me", \
+                             "message": "The button was clicked"}, \
+                            {"label"  : "Or Me", \
+                             "message": "The other button was clicked"} \
+                        ]';
+            const buttons = JSON.parse(txt);
 
             createButton(buttons[0]["label"], buttons[0]["message"]);
             createButton(buttons[1]["label"], buttons[1]["message"]);
