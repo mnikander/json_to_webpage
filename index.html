@@ -21,13 +21,13 @@
 
         function createAllButtons() {
             // format of the array entries: {"label": "", "message": ""},
-            const obj = JSON.parse('{"buttons": [ \
-                                        {"label": "Click me", "message": "The button was clicked"}, \
-                                        {"label": "Or Me", "message": "The other button was clicked"}\
-                                    ]}');
+            const buttons = JSON.parse('[ \
+                                            {"label": "Click me", "message": "The button was clicked"}, \
+                                            {"label": "Or Me", "message": "The other button was clicked"} \
+                                        ]');
 
-            createButton(obj.buttons[0]["label"], obj.buttons[0]["message"]);
-            createButton(obj.buttons[1]["label"], obj.buttons[1]["message"]);
+            createButton(buttons[0]["label"], buttons[0]["message"]);
+            createButton(buttons[1]["label"], buttons[1]["message"]);
         }
 
         window.onload = createAllButtons; // run the function after the page loads
