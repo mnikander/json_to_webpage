@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON to Webpage</title>
+    <script>
+        function createButtons() {
+
+            const button = document.createElement('button');
+            button.textContent = 'Click Me';
+            document.body.appendChild(button);
+            
+            button.addEventListener('click', () => {
+                alert('Button was clicked!');
+            });
+        }
+
+        window.onload = createButtons; // run the function after the page loads
+    </script>
+</head>
+<body>
+    <h1>From JSON to Buttons on a Webpage</h1>
+    <p>This page reads a JSON file, which contains buttons and their associated text. Clicking the button displays their text.</p>
+</body>
+</html>
