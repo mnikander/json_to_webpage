@@ -28,8 +28,9 @@
                         ]';
             const buttons = JSON.parse(txt);
 
-            createButton(buttons[0]["label"], buttons[0]["message"]);
-            createButton(buttons[1]["label"], buttons[1]["message"]);
+            for (let b of buttons) {
+                createButton(b["label"], b["message"]);
+            }
         }
 
         window.onload = createAllButtons; // run the function after the page loads
