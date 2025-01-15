@@ -1,0 +1,44 @@
+{
+    "$type": "Model", 
+    "triggers": 
+    [
+        {
+            "$type": "Trigger", 
+            "name": "Empty"
+        }, 
+        {
+            "$type": "Trigger", 
+            "name": "Click_Me"
+        }, 
+        {
+            "$type": "Trigger", 
+            "name": "Or_Me"
+        }
+    ], 
+    "actions": 
+    [
+        {
+            "$type": "Action", 
+            "trigger": "Reference('#/triggers@0')", 
+            "command": {
+                "$type": "Command"
+            }
+        }, 
+        {
+            "$type": "Action", 
+            "trigger": "Reference('#/triggers@1')", 
+            "command": {
+                "$type": "Display", 
+                "value": "The button was clicked"
+            }
+        }, 
+        {
+            "$type": "Action", 
+            "trigger": "Reference('#/triggers@2')", 
+            "command": {
+                "$type": "Display", 
+                "value": "The other button was clicked"
+            }
+        }
+    ]
+}
